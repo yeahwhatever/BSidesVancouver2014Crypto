@@ -8,7 +8,7 @@ anyone else.
 
 Just be nice and not share your answers once they come out.
 
-A sample file (test.py) is included to show how to use the library for your own 
+A sample file (demo.py) is included to show how to use the library for your own 
 enciphering and deciphering. Two substitution ciphers and a key-based cipher are 
 built into the library.
 

@@ -45,3 +45,12 @@ print 'Encrypted: %s' % crypted
 vc = c.vigenere_cipher(key, crypted)
 print 'Decrypted: %s' % vc.decipher()
 print
+
+print
+print 'Xor cipher (uses the first character as a key, all enciphered characters'
+print ' printed using \\x notation and ASCII formatting. Ex: \\x41 = A):'
+xc = c.xor_cipher(key[0], string)
+crypted = xc.encipher()
+print 'Encrypted: \\x%s' % '\\x'.join("%02x" % ord(x) for x in crypted)
+print 'Decrypted: %s' % xc.decipher()
+print

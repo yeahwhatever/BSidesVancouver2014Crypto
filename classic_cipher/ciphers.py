@@ -150,3 +150,25 @@ class vigenere_cipher():
 	def decipher(s):
 		s._decipher()
 		return s.deciphered
+
+class xor_cipher():
+	def __init__(s, cipherkey, message):
+		s.key = ord(cipherkey)
+		s.message = message
+		s._filter()
+		s.enciphered = s._encipher(s.message)
+	
+	# Removes non-alphabet characters
+	def _filter(s):
+		s.message = filter(lambda _: _.isalpha(), s.message.upper())
+	
+	def _encipher(s, m):
+		return ''.join(chr(ord(x) ^ s.key) for x in m)
+	
+	def encipher(s):
+		return s.enciphered
+
+	def decipher(s):
+		s.deciphered = s._encipher(s.enciphered)
+		return s.deciphered
+
